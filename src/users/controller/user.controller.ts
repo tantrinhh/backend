@@ -7,9 +7,8 @@ import {
 } from '@nestjs/common';
 import { UserService } from '../service/user.service';
 import { UserDTO } from '../dto/register-user.dto';
-import { ApiTags, ApiOperation } from '@nestjs/swagger'; 
+import { ApiTags, ApiOperation } from '@nestjs/swagger';
 import { LoginUserDTO } from '../dto/login-user.dto';
-
 @ApiTags('User')
 @Controller('users')
 export class UserController {
@@ -23,7 +22,7 @@ export class UserController {
 
   @Post('login')
   @UsePipes(ValidationPipe)
-  @ApiOperation({ summary: 'User login' }) 
+  @ApiOperation({ summary: 'User login' })
   login(@Body() LoginUserDTO: LoginUserDTO): Promise<any> {
     return this.userService.login(LoginUserDTO);
   }
