@@ -21,7 +21,7 @@ export class Product {
   discount: number;
 
   @Column()
-  count: number;
+  collection: string;
 
   @Column('json', { nullable: true }) 
   sizes: string[];
