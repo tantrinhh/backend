@@ -40,10 +40,10 @@ export class ProductDTO {
   discount: number;
 
   @ApiProperty({
-    example: "Product collection",
-    description: 'Product collection',
+    example: 1,
+    description: 'Product count',
   })
-  collection: string;
+  collection: number;
 
   @ApiProperty({
     example: ['xl', 'l'],
